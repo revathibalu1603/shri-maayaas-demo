@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/*
+  ============================================================
+  BRAND DESIGN TOKENS
+  ============================================================
+  These CSS custom properties are the single source of truth for
+  brand color. Defaults below match the current demo business.
+  They are also overridden at runtime from `src/config/siteConfig.ts`
+  (see `applyBrandColors` in `src/lib/theme.ts`), so re-skinning the
+  whole site for a different boutique only requires editing
+  siteConfig.ts — no CSS changes needed.
+*/
+:root {
+  --color-ivory: #faf6f0;
+  --color-ivory-deep: #f3ecdf;
+  --color-charcoal: #241f1c;
+  --color-charcoal-soft: #4a423c;
+  --color-burgundy: #6b1f2a;
+  --color-burgundy-deep: #4e161e;
+  --color-beige: #e8dcc8;
+  --color-gold: #ab8654;
+
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-ivory-deep: var(--color-ivory-deep);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-soft: var(--color-charcoal-soft);
+  --color-burgundy: var(--color-burgundy);
+  --color-burgundy-deep: var(--color-burgundy-deep);
+  --color-beige: var(--color-beige);
+  --color-gold: var(--color-gold);
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-burgundy);
+  color: var(--color-ivory);
+}
+
+/* subtle, elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-beige);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
