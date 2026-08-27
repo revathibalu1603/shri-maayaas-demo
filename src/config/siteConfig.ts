@@ -103,7 +103,7 @@ export const businessConfig: BusinessConfig = {
   ],
   googleMapsUrl: '[ADD VERIFIED GOOGLE MAPS LINK]',
   googleMapsEmbedUrl: '[ADD VERIFIED GOOGLE MAPS EMBED LINK]',
-  instagramUrl: '[ADD VERIFIED INSTAGRAM URL]',
+  instagramUrl: 'https://instagram.com/shri_maayaas',
   facebookUrl: '[ADD VERIFIED FACEBOOK URL]',
   openingHours: [
     { days: 'Monday – Saturday', hours: '10:00 AM – 8:00 PM' },
